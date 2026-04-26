@@ -1,0 +1,125 @@
+
+.page { padding-top: 0; }
+
+.hero {
+  position: relative;
+  height: 45vh;
+  min-height: 340px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroImg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,60,46,0.88), rgba(0,0,0,0.4)); }
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 3rem;
+  color: var(--white);
+}
+
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+
+.heroTitle { font-size: clamp(2.5rem, 5vw, 4rem); }
+.heroTitle em { color: var(--gold); font-style: italic; }
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.eyebrowGreen { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 1rem; }
+
+.sectionTitle { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--forest); margin-bottom: 1.5rem; line-height: 1.2; }
+
+.storyText p { font-size: 0.97rem; line-height: 1.85; color: var(--text); margin-bottom: 1rem; }
+
+.storyImage { border-radius: 4px; overflow: hidden; }
+.storyImage img { width: 100%; height: 100%; object-fit: cover; border-radius: 4px; }
+
+.timeline { padding: 4rem 0 6rem; }
+
+.timelineList { display: flex; flex-direction: column; gap: 0; max-width: 700px; margin: 0 auto; }
+
+.milestone { display: grid; grid-template-columns: 80px 2px 1fr; gap: 0 1.5rem; align-items: center; padding: 1rem 0; }
+
+.milestoneYear { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--amber); text-align: right; }
+
+.milestoneLine { width: 2px; height: 100%; background: var(--sand); position: relative; }
+
+.milestoneLine::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--forest);
+}
+
+.milestoneEvent { font-size: 0.95rem; color: var(--text); line-height: 1.6; padding: 0.5rem 0; }
+
+.team { padding: 4rem 0; }
+.team .sectionTitle { margin-bottom: 3rem; }
+
+.teamGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+
+.memberCard {
+  text-align: center;
+  background: var(--white);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+
+.memberCard:hover { transform: translateY(-6px); }
+
+.memberAvatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0 auto 1.2rem;
+}
+
+.memberName { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--forest); margin-bottom: 0.3rem; }
+.memberRole { font-size: 0.82rem; font-weight: 500; color: var(--amber); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.memberMeta { font-size: 0.8rem; color: var(--text-light); }
+
+.values { padding: 4rem 0 6rem; }
+.valuesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+
+.value {
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+}
+
+.valueIcon { font-size: 2rem; display: block; margin-bottom: 1rem; }
+.valueTitle { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 0.75rem; }
+.valueDesc { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .story { grid-template-columns: 1fr; gap: 2rem; }
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+  .valuesGrid { grid-template-columns: 1fr; }
+}
+.sectionTitleCenter { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--forest); margin-bottom: 3rem; text-align: center; }

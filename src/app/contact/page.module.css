@@ -1,0 +1,59 @@
+
+.page { padding-top: 0; }
+
+.hero {
+  background: var(--forest);
+  padding: 10rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(61,122,88,0.4), transparent 65%);
+}
+
+.heroContent { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; color: var(--white); }
+
+.eyebrow { font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+
+.heroTitle { font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 0.75rem; }
+.heroTitle em { color: var(--gold); font-style: italic; }
+
+.heroSub { font-size: 1rem; color: rgba(255,255,255,0.7); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  padding: 5rem 0 6rem;
+  align-items: start;
+}
+
+.sectionTitle { font-size: 1.8rem; color: var(--forest); margin-bottom: 2rem; }
+
+.infoCard, .faqCard {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  margin-bottom: 1.5rem;
+}
+
+.infoTitle { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--forest); margin-bottom: 1.5rem; }
+
+.contactItem { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; }
+.contactIcon { font-size: 1.2rem; flex-shrink: 0; }
+.contactLabel { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.2rem; }
+.contactValue { font-size: 0.92rem; color: var(--charcoal); line-height: 1.5; }
+.contactValue[href] { color: var(--forest); transition: color 0.2s; }
+.contactValue[href]:hover { color: var(--amber); }
+
+.faq { padding: 1rem 0; border-bottom: 1px solid var(--sand); }
+.faq:last-child { border-bottom: none; }
+.faqQ { font-weight: 600; font-size: 0.88rem; color: var(--forest); margin-bottom: 0.5rem; }
+.faqA { font-size: 0.85rem; color: var(--text-light); line-height: 1.7; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,104 @@
+
+.card {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.12); }
+
+.imgWrap { display: block; position: relative; aspect-ratio: 4/3; overflow: hidden; }
+
+.img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+
+.card:hover .img { transform: scale(1.06); }
+
+.badges { position: absolute; top: 1rem; left: 1rem; display: flex; gap: 0.5rem; }
+
+.category {
+  background: var(--forest);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 2px;
+}
+
+.discount {
+  background: var(--amber);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+}
+
+.difficulty {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.55);
+  color: var(--white);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+}
+
+.body { padding: 1.5rem; }
+
+.meta { display: flex; gap: 1rem; margin-bottom: 0.75rem; }
+.location, .duration { font-size: 0.78rem; color: var(--text-light); }
+
+.title { margin-bottom: 0.6rem; }
+.title a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  color: var(--forest);
+  transition: color 0.2s;
+}
+.title a:hover { color: var(--amber); }
+
+.desc { font-size: 0.87rem; color: var(--text-light); line-height: 1.65; margin-bottom: 1.2rem; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
+
+.price { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+
+.currentPrice { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--forest); }
+
+.originalPrice { font-size: 0.85rem; color: var(--text-light); text-decoration: line-through; }
+
+.perPerson { font-size: 0.75rem; color: var(--text-light); }
+
+.rating { display: flex; align-items: center; gap: 0.25rem; }
+.star { color: var(--gold); font-size: 1rem; }
+.ratingNum { font-weight: 600; font-size: 0.9rem; color: var(--charcoal); }
+.reviews { font-size: 0.78rem; color: var(--text-light); }
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.btn:hover { background: var(--forest); color: var(--white); }

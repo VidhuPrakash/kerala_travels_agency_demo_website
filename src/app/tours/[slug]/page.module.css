@@ -1,0 +1,228 @@
+
+.page { padding-top: 0; }
+
+.hero {
+  position: relative;
+  height: 55vh;
+  min-height: 420px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.heroImg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.heroOverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,30,20,0.9) 0%, rgba(0,0,0,0.35) 60%, transparent 100%); }
+
+.heroContent { position: relative; z-index: 1; width: 100%; padding-bottom: 3rem; color: var(--white); }
+
+.back {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+}
+.back:hover { color: var(--white); }
+
+.category {
+  display: inline-block;
+  background: var(--amber);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 1.2rem;
+}
+
+.heroMeta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem;
+  padding: 4rem 0 6rem;
+  align-items: start;
+}
+
+.main { display: flex; flex-direction: column; gap: 3rem; }
+
+.section {}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  color: var(--forest);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--sand);
+}
+
+.longDesc { font-size: 1rem; line-height: 1.85; color: var(--text); }
+
+.highlights { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.includes { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.include {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--ivory);
+  padding: 0.75rem 1rem;
+  border-radius: 3px;
+}
+
+.sidebar { display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 100px; }
+
+.bookingCard {
+  background: var(--white);
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border-top: 3px solid var(--amber);
+}
+
+.from { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 0.4rem; }
+
+.priceRow { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.4rem; }
+
+.price { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 600; color: var(--forest); }
+
+.badge {
+  background: var(--amber);
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+}
+
+.originalPrice { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
+
+.duration {
+  background: var(--ivory);
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  border-radius: 2px;
+  margin-bottom: 1.2rem;
+}
+
+.bookBtn {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background: var(--forest);
+  color: var(--white);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 0.75rem;
+  transition: background 0.25s;
+}
+
+.bookBtn:hover { background: var(--forest-light); }
+
+.inquireBtn {
+  display: block;
+  text-align: center;
+  padding: 0.9rem;
+  border: 1.5px solid var(--forest);
+  color: var(--forest);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+  transition: all 0.25s;
+}
+
+.inquireBtn:hover { background: var(--forest); color: var(--white); }
+
+.guarantee {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.9;
+  border-top: 1px solid var(--sand);
+  padding-top: 1rem;
+}
+
+.helpCard {
+  background: var(--forest);
+  color: var(--white);
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.helpCard h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 0.5rem; }
+.helpCard p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+
+.phone, .whatsapp {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.phone { background: rgba(255,255,255,0.15); color: var(--white); }
+.whatsapp { background: #25D366; color: var(--white); }
+.phone:hover, .whatsapp:hover { opacity: 0.85; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .includes { grid-template-columns: 1fr; }
+}
