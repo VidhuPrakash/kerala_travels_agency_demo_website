@@ -96,7 +96,11 @@ export default function AboutPage() {
       <div className="container">
         {/* Story */}
         <section className={styles.story}>
-          <AnimateOnScroll animation="slideLeft" as="div" className={styles.storyText}>
+          <AnimateOnScroll
+            animation="slideLeft"
+            as="div"
+            className={styles.storyText}
+          >
             <p className={styles.eyebrowGreen}>
               Founded 2008 · Malappuram, Kerala
             </p>
@@ -120,12 +124,17 @@ export default function AboutPage() {
               not a transaction on a ledger.
             </p>
           </AnimateOnScroll>
-          <AnimateOnScroll animation="slideRight" delay={150} as="div" className={styles.storyImage}>
+          <AnimateOnScroll
+            animation="slideRight"
+            delay={150}
+            as="div"
+            className={styles.storyImage}
+          >
             <img
               src="https://images.unsplash.com/photo-1584553421349-3557471bed79?w=700&q=80"
               alt="Kerala spice plantation"
             />
-          </div>
+          </AnimateOnScroll>
         </section>
 
         {/* Milestones */}
@@ -133,7 +142,13 @@ export default function AboutPage() {
           <h2 className={styles.sectionTitleCenter}>Our Journey</h2>
           <div className={styles.timelineList}>
             {milestones.map((m, i) => (
-              <AnimateOnScroll key={m.year} animation="slideLeft" delay={i * 80} as="div" className={styles.milestone}>
+              <AnimateOnScroll
+                key={m.year}
+                animation="slideLeft"
+                delay={i * 80}
+                as="div"
+                className={styles.milestone}
+              >
                 <div className={styles.milestoneYear}>{m.year}</div>
                 <div className={styles.milestoneLine} />
                 <div className={styles.milestoneEvent}>{m.event}</div>
@@ -148,7 +163,13 @@ export default function AboutPage() {
           <h2 className={styles.sectionTitle}>Meet Our Experts</h2>
           <div className={styles.teamGrid}>
             {team.map((member, i) => (
-              <AnimateOnScroll key={member.name} animation="scaleUp" delay={i * 100} as="div" className={styles.memberCard}>
+              <AnimateOnScroll
+                key={member.name}
+                animation="scaleUp"
+                delay={i * 100}
+                as="div"
+                className={styles.memberCard}
+              >
                 <div className={styles.memberAvatar}>{member.initials}</div>
                 <h3 className={styles.memberName}>{member.name}</h3>
                 <p className={styles.memberRole}>{member.role}</p>
@@ -180,7 +201,13 @@ export default function AboutPage() {
                 desc: "No hidden fees, no commission-based recommendations. Your itinerary is built for your experience, not our margins.",
               },
             ].map((v, i) => (
-              <AnimateOnScroll key={v.title} animation="fadeUp" delay={i * 120} as="div" className={styles.value}>
+              <AnimateOnScroll
+                key={v.title}
+                animation="fadeUp"
+                delay={i * 120}
+                as="div"
+                className={styles.value}
+              >
                 <span className={styles.valueIcon}>
                   <v.icon size={24} />
                 </span>
